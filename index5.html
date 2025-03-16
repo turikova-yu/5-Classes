@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            print(){
+                console.log(`Name: ${this.name}  Age: ${this.age}`);
+            }
+        }
+
+        class Employee extends Person{
+            constructor(name, age, company){
+                super(name, age);
+                this.company = company;
+            }
+            print(){
+                super.print();
+                console.log(`Company: ${this.company}`);
+            }
+        }
+        const sam = new Employee("Sam", 25, "Google");
+        sam.print();    // Name: Sam  Age: 25
+                        // Company: Google
+    </script>
+</body>
+</html>
